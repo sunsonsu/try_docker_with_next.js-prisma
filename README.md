@@ -1,3 +1,7 @@
+# Next.js Prisma Postgres
+## This repository is about trying to contanerize Next.js, Prisma, Postgres to easily deploying
+To use this just use the command "docker compose up -d" in the repository and go to localhost:3000
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
