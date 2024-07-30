@@ -17,6 +17,8 @@ RUN \
   else echo "Lockfile not found." && exit 1; \
   fi
 
+RUN npm install
+
 
 # Copy and generate Prisma client
 COPY prisma ./prisma
