@@ -50,7 +50,7 @@ const List = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <h1 className="text-2xl font-semibold mb-6">Blog Posts</h1>
+      <h1 className="text-2xl font-semibold mb-6">Blog Postt</h1>
 
       <div className="flex justify-between items-center mb-6">
         <div className="flex gap-4">
