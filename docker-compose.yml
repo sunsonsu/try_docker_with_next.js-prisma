@@ -1,39 +1,39 @@
 version: '3.8'
 services:
   # Development mode
-  nextapp:
-    container_name: frontend
-    build:
-      context: . 
-      target: dev
-    command: npm run dev
-    environment:
-      - NODE_ENV=development
-      - DATABASE_URL=postgresql://myuser:mypassword@postgres:5432/mydb
-    volumes:
-      - .:/app
-      - /app/node_modules
-      - /app/.next
-    ports:
-      - "3000:3000"
-    restart: always
-    depends_on:
-      - postgres
-
-  # Uncomment the following block for production mode
   # nextapp:
   #   container_name: frontend
-  #   image: nextapp
   #   build:
-  #     context: .
-  #     target: runner
+  #     context: . 
+  #     target: dev
+  #   command: npm run dev
+  #   environment:
+  #     - NODE_ENV=development
+  #     - DATABASE_URL=postgresql://myuser:mypassword@postgres:5432/mydb
+  #   volumes:
+  #     - .:/app
+  #     - /app/node_modules
+  #     - /app/.next
   #   ports:
   #     - "3000:3000"
-  #   environment:
-  #     - NODE_ENV=production
-  #     - DATABASE_URL=postgresql://myuser:mypassword@postgres:5432/mydb
+  #   restart: always
   #   depends_on:
-  #     - postgres
+      # - postgres
+
+  # Uncomment the following block for production mode
+  nextapp:
+    container_name: frontend
+    image: nextapp
+    build:
+      context: .
+      target: dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://myuser:mypassword@postgres:5432/mydb
+    depends_on:
+      - postgres
   
   postgres:
     image: postgres:latest

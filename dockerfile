@@ -23,6 +23,8 @@ RUN npm install
 # Copy and generate Prisma client
 COPY prisma ./prisma
 RUN npx prisma generate
+#change to npx prisma  deploy 
+
 
 # Development stage
 FROM base AS dev
@@ -33,6 +35,8 @@ COPY . .
 
 # Command for development
 CMD ["npm", "run", "dev"]
+COPY ./docker-entrypoint.sh /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # Build stage: rebuild the source code only when needed
 FROM base AS builder
