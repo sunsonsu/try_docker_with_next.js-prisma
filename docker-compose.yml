@@ -9,6 +9,7 @@ services:
       - NODE_ENV=development
       - DATABASE_URL=postgresql://myuser:mypassword@postgres:5432/mydb
     develop:
+    # hot reload
       watch:
       - action: sync
         path: ./src
