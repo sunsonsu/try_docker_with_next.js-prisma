@@ -11,5 +11,5 @@ EXPOSE 3000
 RUN npx prisma generate
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD npm start
+CMD npm run dev
 
