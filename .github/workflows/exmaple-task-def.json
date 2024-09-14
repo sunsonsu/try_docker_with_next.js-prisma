@@ -21,7 +21,11 @@
            "volumesFrom": []
        }
    ],
+   "cpu": "512",
+   "memory": "1024",
    "family": "web-app-task-def",
+   "taskRoleArn": "arn:aws:iam::641352031661:role/LabRole",
+   "executionRoleArn": "arn:aws:iam::641352031661:role/LabRole",
    "networkMode": "awsvpc",
    "volumes": [],
    "placementConstraints": [],
