@@ -1,8 +1,11 @@
-# Next.js Prisma Postgres
-## This repository is about trying to contanerize Next.js, Prisma, Postgres to easily deploying
+# Next.js Prisma Postgres in Docker
+## This repository is my lab about containerizing Next.js, Prisma, and PostgreSQL in a Docker container to deploy easily.
 
-The project is about blog post that can CRUD with prisma to postgres. I done this project by watching mikelopster with this video link:
+The project is about blog post that can CRUD with prismaORM. I done this project by watching mikelopster with this video link:
 https://youtu.be/_D-lAKZqNTA?si=f5e1bIkXuRFj9zab
 
-To use this just use the command "docker compose up -d" in the repository and go to localhost:3000
+To use this just use the command 
+```docker compose up -d ```
 
+and then your website is on
+``` localhost:3000 ```
